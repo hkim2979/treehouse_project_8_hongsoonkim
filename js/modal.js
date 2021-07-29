@@ -64,7 +64,7 @@ window.onclick = function (event) {
   }
 };
 
-// Next employee shows when click
+// Next employee shows when click button
 dialog.addEventListener("click", (e) => {
   if (e.target.classList.contains("next")) {
     let index = document.getElementById("index");
@@ -79,7 +79,7 @@ dialog.addEventListener("click", (e) => {
   }
 });
 
-// Previous employee shows when click
+// Previous employee shows when click button
 dialog.addEventListener("click", (e) => {
   if (e.target.classList.contains("prev")) {
     let index = document.getElementById("index");
