@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap");
+
+:root {
+  --primary-color: rgb(24, 24, 24);
+  --seconadry-color: #000000;
+  --border-color: #616161;
+  --background-color: #ffffff;
+  --card-color: #f7f7f7;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: "Noto Sans JP", sans-serif;
+  max-width: 1300px;
+  padding: 2rem 1rem;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  color: var(--seconadry-color);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-left: 0.5rem;
+}
+
+#search {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  width: 400px;
+  height: 3rem;
+  padding-left: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+}
+
+#search:focus {
+  outline: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  justify-items: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.card {
+  background-color: var(--card-color);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  transition: box-shadow 0.3s ease-in;
+}
+
+.emp-avatar {
+  margin-right: 0.8rem;
+}
+
+.emp-avatar img {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.emp-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.emp-name {
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+.emp-info p {
+  color: var(--seconadry-color);
+  font-size: 0.9rem;
+  margin-right: 1rem;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  position: relative;
+  background-color: var(--background-color);
+  margin: 10% auto;
+  padding: 1rem 1rem 2.5rem;
+  border: 2px solid var(--border-color);
+  border-radius: 5px;
+  width: 425px;
+  min-width: 300px;
+}
+
+.modal-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.modal-info h4 {
+  color: var(--primary-color);
+}
+
+.modal-info p {
+  color: var(--seconadry-color);
+  font-size: 0.9rem;
+}
+
+.modal-info img {
+  width: 125px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.line-break {
+  border-bottom: 1px solid var(--border-color);
+  width: 80%;
+}
+
+#index {
+  visibility: hidden;
+}
+
+.closeDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.close {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.turn {
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  width: 93%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.close,
+.prev,
+.next {
+  color: var(--primary-color);
+  transition: transform 0.3s ease-in;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus,
+.prev:hover,
+.next:hover {
+  transform: scale(1.3);
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 4rem 1rem;
+  }
+
+  #search {
+    width: 300px;
+    margin-right: 2rem;
+  }
+}
+
+@media screen and (min-width: 1296px) {
+  header {
+    margin: 0 0.5rem 1rem;
+  }
+}
